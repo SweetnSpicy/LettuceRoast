@@ -64,7 +64,7 @@ class CompTableVC: UITableViewController {
 //        default:
 //            break
 //        }
-//        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
     

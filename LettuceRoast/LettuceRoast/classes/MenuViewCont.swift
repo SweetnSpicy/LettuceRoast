@@ -16,6 +16,26 @@ class MenuViewCont: UIViewController {
         }
         super.didMove(toParent: parent)
     }
+    
+    
+    @IBOutlet weak var usrTxt: UITextField!
+    @IBOutlet weak var jokesTxt: UITextView!
+    @IBOutlet weak var typeSwitch: UISwitch!
+    
+    
+    @IBAction func addToComments(_ sender: Any) {
+        if usrTxt.text == nil || jokesTxt.text == nil {
+            
+        }
+        if typeSwitch.isOn {
+            //insult
+            //let c = comment()
+            //comments.add()
+        } else {
+            //compliment
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +53,7 @@ class MenuViewCont: UIViewController {
     }
     */
 
-    func rickRolled(_ sender: UIButton) {
+    @IBAction func rickRolled(_ sender: UIButton) {
         UIApplication.shared.openURL(NSURL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")! as URL)
     }
 }
