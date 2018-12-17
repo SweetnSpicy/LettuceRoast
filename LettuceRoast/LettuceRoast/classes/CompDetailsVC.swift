@@ -14,22 +14,24 @@ class CompDetailsVC: UIViewController {
 
     var comment: Comment!
     
-    var label: UILabel!
     var img: UIImage!
-    var txtLbl: UILabel!
     
+    @IBOutlet weak var userLbl: UILabel!
+    @IBOutlet weak var jokeLbl: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        label.text = comment.getUsr()
-        txtLbl.text = comment.getJoke()
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(comment.getJoke())
+        print(comment.getUsr())
+        print(comment.getType())
         
-//        //user/title label
-//        //label.frame = CGRect(x: 50, y: 100, width: 200, height: 40)
+
+//        user/title label
+//        label.frame = CGRect(x: 50, y: 100, width: 200, height: 40)
 //        label.text = comment.getUsr()
 //        label.backgroundColor = UIColor.blue
 //        label.font = label.font.withSize(40)
@@ -54,6 +56,11 @@ class CompDetailsVC: UIViewController {
 //
 //
 //    }
+    
+    override func viewWillLayoutSubviews() {
+        userLbl?.text = comment.getUsr()
+        jokeLbl?.text = comment.getJoke()
+    }
     
 
     /*
