@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LettuceRoast.xcodeproj">
+      location = "group:../LettuceRoast/classes/CompDetailsVC.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../LettuceRoast/classes/CompDetailsVC.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/student/Documents/GitHub/LettuceRoast/LettuceRoast/LettuceRoast/models/test.json">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

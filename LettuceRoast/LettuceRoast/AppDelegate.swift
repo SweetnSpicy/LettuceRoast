@@ -12,63 +12,74 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var comments: [Comment] = []
+    var compliments : [Comment] = []
+    var insults : [Comment] = []
+    
+    //var tabBarCont : UITabBarController!
+    var navVC : UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        let endpoint = URL(string: "http://serenity.ist.rit.edu/~cxm1544/TheToaster/assets/inc/service.php")
-//        let data = try? Data(contentsOf: endpoint!)
-//        if let json = (try? JSONSerialization.jsonObject(with: data!,
-//                                                         options: .mutableContainers)) as? [String:Any]{
-//            if let parks = json["parks"] as? Array<[String:Any]> {
-//                for park in parks{
-//                    print("******** \(park)")
-//                    let p = DBObj(json:park)
-//                    print("!!!!!! park name: \(p.joke)")
-//                }
-//            }
-//        }
-//
-//        //using swifty
-//        let session = URLSession.shared
-//
-//        let loadDataTask = session.dataTask(with: endpoint!, completionHandler: {(data:Data?, response:URLResponse?, error: Error?)-> Void in
-//            if let respError = error{
-//                //erro occurred... display alert
-//                //we on the background thread
-//            } else if let httpResp = response as? HTTPURLResponse{
-//                if httpResp.statusCode != 200 {
-//                    let statusError = NSError(domain: "com.french.bryan", code: httpResp.statusCode, userInfo: [NSLocalizedDescriptionKey: "HTTP Status code unexpected"])
-//                } else {
-//                    let json = try! JSON(data:data!) //do with catch is better
-//                    if let id = json["parks"][0]["id"].string{
-//                        print("URLSession and SWIFTY: \(id)")
-//                    }
-//                    if let parksArray = json["parks"].array{
-//                        var parks = [DBObj]()
-//                        for parkDict in parksArray{
-//                            let id:Int? = parkDict["id"].int
-//                            let joke:String? = parkDict["joke"].string
-//                            let insult:Bool? = parkDict["insult"].bool
-//                            let userId:Int? = parkDict["userId"].int
-//
-//                            let park = DBObj()
-//                            park.id = id
-//                            park.joke = joke
-//                            park.insult = insult
-//                            park.userId = userId
-//                        }
-//                        for p in parks{
-//                            print(p.id)
-//                        }
-//                    }
-//                }
-//            }
-//        })
-//        loadDataTask.resume()
+        
+        loadData()
+        
+        navVC = (window?.rootViewController as? UINavigationController)!
+        let tabBarCont = navVC?.viewControllers[0] as! UITabBarController
+        let compVC = tabBarCont.viewControllers![1] as! CompTableVC
+        let roastVC =  tabBarCont.viewControllers![0] as! RoastTableVC
+        
+        roastVC.comments = Comments.sharedInst.comLst
+        roastVC.roasts = Comments.sharedInst.insLst
+        compVC.comments = Comments.sharedInst.comLst
+        compVC.compliments = Comments.sharedInst.compLst
         
         return true
     }
+    
+    func loadData(){
+        print("loaddata inside")
+        if let path = Bundle.main.path(forResource: "test", ofType: "json") {
+            print("got path")
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [String:Any]
+                //if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let comment = jsonResult["comment"] as? [Any] {
+                let tempArray = jsonResult["comments"] as! Array<[String:Any]>
+                for dict in tempArray{
+                    let usr = dict["usr"]! as! String
+                    let joke = dict["joke"]! as! String
+                    let type = dict["type"]! as! Bool
+                    
+                    let c = Comment(usr: usr, joke: joke, type: type)
+                    comments.append(c)
+                    //print(c)
+                    
+                    if type == true {
+                        insults.append(c)
+                        
+                    } else {
+                        compliments.append(c)
+                        //print("insults")
+                    }
+                    
+                }
+//                print("all data in")
+//                //print(comments)
+//                print("insults: ")
+//                print(insults)
+//                print("\ncompliments: ")
+//                print(compliments)
+//                print("output done")
+                
+            } catch {
+                print("nada on the input")
+            }
+        }
+        Comments.sharedInst.comLst = comments
+        Comments.sharedInst.compLst = compliments
+        Comments.sharedInst.insLst = insults
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

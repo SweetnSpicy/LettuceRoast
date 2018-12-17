@@ -1,5 +1,5 @@
 //
-//  MenuVC.swift
+//  MenuViewCont.swift
 //  LettuceRoast
 //
 //  Created by Student on 12/16/18.
@@ -8,8 +8,14 @@
 
 import UIKit
 
-class MenuVC: UIViewController {
+class MenuViewCont: UIViewController {
 
+    override func didMove(toParent parent: UIViewController?) {
+        if !(parent?.isEqual(self.parent) ?? false) {
+            print("Parent view loaded")
+        }
+        super.didMove(toParent: parent)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +33,7 @@ class MenuVC: UIViewController {
     }
     */
 
+    func rickRolled(_ sender: UIButton) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.youtube.com/watch?v=dQw4w9WgXcQ")! as URL)
+    }
 }
