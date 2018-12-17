@@ -13,20 +13,27 @@ class CompTableVC: UITableViewController {
     var comments = Comments.sharedInst.comLst
     var compliments = Comments.sharedInst.compLst
     var viewCont : CompTableVC!
+    var menuVC : MenuViewCont!
     //var comment : Comment!
     
     override func viewWillAppear(_ animated: Bool) {
         comments = Comments.sharedInst.comLst
         compliments = Comments.sharedInst.compLst
-        tableView.reloadData()
+        self.tableView.reloadData()
+        
     }
     
+    @objc func goToMenuPage(){
+        self.navigationController?.pushViewController(menuVC, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("compliments:")
         //print(compliments)
         //print(comments)
         title = "Pleasantries"
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: Selector(("goToMenuPage")))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Menu", style: .done, target: self, action: #selector(goToMenuPage))
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,6 +62,7 @@ class CompTableVC: UITableViewController {
 //            cell = UITableViewCell(style: .default, reuseIdentifier: "compCell")
 //        }
         cell.textLabel?.text = compliments[indexPath.row].title
+        cell.detailTextLabel?.text = compliments[indexPath.row].subtitle
         
 //        switch indexPath.section{
 //        case 0:

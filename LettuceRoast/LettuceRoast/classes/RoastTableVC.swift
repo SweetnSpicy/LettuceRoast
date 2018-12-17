@@ -13,6 +13,7 @@ class RoastTableVC: UITableViewController {
     var comments = Comments.sharedInst.comLst
     var roasts = Comments.sharedInst.insLst
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,29 +24,47 @@ class RoastTableVC: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        comments = Comments.sharedInst.comLst
+        roasts = Comments.sharedInst.insLst
+        print(comments)
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return roasts.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roastCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = roasts[indexPath.row].title
+        cell.detailTextLabel?.text = roasts[indexPath.row].subtitle
 
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
-    */
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = roasts[indexPath.row]
+        let detailVC = RoastDetailsVC()
+        detailVC.title = comment.title
+        detailVC.comment = comment
+        //detailVC.delegate = viewCont
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

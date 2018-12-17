@@ -139,9 +139,9 @@ class Comment: NSObject {
         }
     }
     
-//    var subtitle : String? {
-//        get {
-//            return parkLocation
-//        }
-//    }
+    var subtitle : String? {
+        get {
+            return usr
+        }
+    }
 }

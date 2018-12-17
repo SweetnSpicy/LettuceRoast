@@ -10,6 +10,7 @@ import UIKit
 
 class RoastDetailsVC: UIViewController {
 
+    var comment: Comment!
     override func viewDidLoad() {
         super.viewDidLoad()
 

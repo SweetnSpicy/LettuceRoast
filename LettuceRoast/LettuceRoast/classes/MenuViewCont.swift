@@ -9,6 +9,11 @@
 import UIKit
 
 class MenuViewCont: UIViewController {
+    
+    var comment = Comment()
+    var comments = Comments.sharedInst.comLst
+    var compliments = Comments.sharedInst.compLst
+    var insults = Comments.sharedInst.insLst
 
     override func didMove(toParent parent: UIViewController?) {
         if !(parent?.isEqual(self.parent) ?? false) {
@@ -17,25 +22,40 @@ class MenuViewCont: UIViewController {
         super.didMove(toParent: parent)
     }
     
-    
     @IBOutlet weak var usrTxt: UITextField!
     @IBOutlet weak var jokesTxt: UITextView!
     @IBOutlet weak var typeSwitch: UISwitch!
     
-    
     @IBAction func addToComments(_ sender: Any) {
-        if usrTxt.text == nil || jokesTxt.text == nil {
-            
-        }
+//        if usrTxt.text == nil || jokesTxt.text == nil {
+//
+//        }
         if typeSwitch.isOn {
             //insult
-            //let c = comment()
-            //comments.add()
+            let c = Comment(usr: usrTxt.text!, joke: jokesTxt.text!, type: true)
+            //Comments.sharedInst.add(comment: c, at: 0)
+            comments.append(c)
+            insults.append(c)
+            
         } else {
             //compliment
+            let c = Comment(usr: usrTxt.text!, joke: jokesTxt.text!, type: false)
+            //Comments.sharedInst.add(comment: c, at: 0)
+            comments.append(c)
+            compliments.append(c)
         }
+        //print(comments)
+        //self.viewDidLoad()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Comments.sharedInst.comLst = comments
+        //UIViewController.reloadData()
+        print("bambi")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
