@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1028008A8A05BDD2DDA4DFF6 /* Pods_LettuceRoast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187C626FFA2A220000B4741 /* Pods_LettuceRoast.framework */; };
 		3F0A5DF121C750B00047E1F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD3220721C6DB82006FE13C /* AppDelegate.swift */; };
 		3F0A5DF321C752E80047E1F1 /* CompDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5DF221C752E80047E1F1 /* CompDetailsVC.swift */; };
 		3F0A5DF721C78DA40047E1F1 /* RoastDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A5DF621C78DA40047E1F1 /* RoastDetailsVC.swift */; };
@@ -16,6 +17,7 @@
 		3F54120421C72DAF005BCD49 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54120321C72DAF005BCD49 /* Comments.swift */; };
 		3F54120621C72FC2005BCD49 /* RoastTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F54120521C72FC2005BCD49 /* RoastTableVC.swift */; };
 		3F54120B21C73946005BCD49 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F54120A21C73946005BCD49 /* test.json */; };
+		3F5DB088221E26130021D06C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DB087221E26130021D06C /* GoogleService-Info.plist */; };
 		3FD3220D21C6DB82006FE13C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3220B21C6DB82006FE13C /* Main.storyboard */; };
 		3FD3220F21C6DB84006FE13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3220E21C6DB84006FE13C /* Assets.xcassets */; };
 		3FD3221221C6DB84006FE13C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3221021C6DB84006FE13C /* LaunchScreen.storyboard */; };
@@ -26,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B2958DBF5A41EFD7360FED /* Pods-LettuceRoast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LettuceRoast.release.xcconfig"; path = "Target Support Files/Pods-LettuceRoast/Pods-LettuceRoast.release.xcconfig"; sourceTree = "<group>"; };
 		3F0A5DF221C752E80047E1F1 /* CompDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompDetailsVC.swift; path = LettuceRoast/classes/CompDetailsVC.swift; sourceTree = "<group>"; };
 		3F0A5DF621C78DA40047E1F1 /* RoastDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoastDetailsVC.swift; path = classes/RoastDetailsVC.swift; sourceTree = "<group>"; };
 		3F5411F421C6ED38005BCD49 /* MenuViewCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuViewCont.swift; path = LettuceRoast/classes/MenuViewCont.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		3F54120321C72DAF005BCD49 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		3F54120521C72FC2005BCD49 /* RoastTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoastTableVC.swift; path = LettuceRoast/classes/RoastTableVC.swift; sourceTree = "<group>"; };
 		3F54120A21C73946005BCD49 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		3F5DB087221E26130021D06C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3FD3220421C6DB82006FE13C /* LettuceRoast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LettuceRoast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD3220721C6DB82006FE13C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD3220C21C6DB82006FE13C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		3FD3221B21C6DC03006FE13C /* DBObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBObj.swift; sourceTree = "<group>"; };
 		3FD3222221C6EA4A006FE13C /* classes */ = {isa = PBXFileReference; lastKnownFileType = folder; name = classes; path = LettuceRoast/classes; sourceTree = SOURCE_ROOT; };
 		3FD3222621C6EA9E006FE13C /* jerry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jerry.jpg; sourceTree = "<group>"; };
+		9187C626FFA2A220000B4741 /* Pods_LettuceRoast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LettuceRoast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA30484A72DCE272E5377679 /* Pods-LettuceRoast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LettuceRoast.debug.xcconfig"; path = "Target Support Files/Pods-LettuceRoast/Pods-LettuceRoast.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1028008A8A05BDD2DDA4DFF6 /* Pods_LettuceRoast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,8 @@
 				3F5411F421C6ED38005BCD49 /* MenuViewCont.swift */,
 				3FD3220621C6DB82006FE13C /* LettuceRoast */,
 				3FD3220521C6DB82006FE13C /* Products */,
+				B96205ECE62F9A2D78FCC95A /* Pods */,
+				65B810E1FC282153D57D5BB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +109,7 @@
 				3F5411FE21C720A2005BCD49 /* CompTableVC.swift */,
 				3FD3220E21C6DB84006FE13C /* Assets.xcassets */,
 				3FD3221021C6DB84006FE13C /* LaunchScreen.storyboard */,
+				3F5DB087221E26130021D06C /* GoogleService-Info.plist */,
 				3FD3221321C6DB84006FE13C /* Info.plist */,
 			);
 			path = LettuceRoast;
@@ -113,6 +123,24 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		65B810E1FC282153D57D5BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9187C626FFA2A220000B4741 /* Pods_LettuceRoast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B96205ECE62F9A2D78FCC95A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA30484A72DCE272E5377679 /* Pods-LettuceRoast.debug.xcconfig */,
+				18B2958DBF5A41EFD7360FED /* Pods-LettuceRoast.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FD3221621C6DB84006FE13C /* Build configuration list for PBXNativeTarget "LettuceRoast" */;
 			buildPhases = (
+				10FFCCC435F8040FD29C4C48 /* [CP] Check Pods Manifest.lock */,
 				3FD3220021C6DB82006FE13C /* Sources */,
 				3FD3220121C6DB82006FE13C /* Frameworks */,
 				3FD3220221C6DB82006FE13C /* Resources */,
+				730F0B3A2CF812B2AD7317E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,10 +207,62 @@
 				3FD3220D21C6DB82006FE13C /* Main.storyboard in Resources */,
 				3FD3222321C6EA4B006FE13C /* classes in Resources */,
 				3F54120B21C73946005BCD49 /* test.json in Resources */,
+				3F5DB088221E26130021D06C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10FFCCC435F8040FD29C4C48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LettuceRoast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		730F0B3A2CF812B2AD7317E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LettuceRoast/Pods-LettuceRoast-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LettuceRoast/Pods-LettuceRoast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FD3220021C6DB82006FE13C /* Sources */ = {
@@ -340,6 +422,7 @@
 		};
 		3FD3221721C6DB84006FE13C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA30484A72DCE272E5377679 /* Pods-LettuceRoast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +440,7 @@
 		};
 		3FD3221821C6DB84006FE13C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B2958DBF5A41EFD7360FED /* Pods-LettuceRoast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
