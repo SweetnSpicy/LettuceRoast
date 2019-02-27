@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewCont: UIViewController {
+class MenuViewCont: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var comment = Comment()
     var comments = Comments.sharedInst.comLst
@@ -57,9 +57,27 @@ class MenuViewCont: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        jokesTxt.delegate = self
+        usrTxt.delegate = self
+        //jokesTxt.resignFirstResponder()
         // Do any additional setup after loading the view.
+    }
+
+//    private func textViewShouldReturn(_ jokesTxt: UITextView) -> Bool {
+//        self.view.endEditing(true)
+//        return true
+//    }
+    
+    func textFieldShouldReturn(_ usrTxt: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    func textViewShouldEndEditing(_ jokesTxt: UITextView) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
 
